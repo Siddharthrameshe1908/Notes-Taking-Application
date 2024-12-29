@@ -1,0 +1,293 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    background: linear-gradient(120deg,lightblue,lightgray);
+    padding: 20px;
+    position: sticky;
+    top: 0px;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+
+.maintag{
+    display: flex;
+}
+
+.formBlock{ 
+    background-color:aliceblue;
+    width: 40%;
+    height: 650px;
+    margin: 40px;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 5px 9px 9px 2px gray;
+} 
+
+.form-content{
+    margin: 30px;
+}
+
+.form-content label{
+    display: block;
+    padding-bottom: 10px;
+    font-size: large;
+    font-weight: bold;
+}
+
+.form-content input,textarea{
+    padding: 10px;
+    width: 90%;
+    border: none;
+    background-color: rgb(251, 244, 244);
+    border-radius: 15px;   
+    box-shadow: -3px 7px 9px 2px gray;
+}
+
+.form-content input:focus,textarea:focus{
+    transform: translate(5px,-5px);
+    outline: none;
+}
+
+.form-content input:hover,textarea:hover{
+    transform: translate(5px,-5px);
+}
+
+.form-content select{
+    padding: 10px;
+    text-align: center;
+    border:none;
+    background-color: rgb(251, 244, 244);
+    border-radius: 15px;
+    font-size: 15px;
+    box-shadow: -2px 5px 9px 2px gray;
+}
+
+.form-content select:focus{
+    transform: translate(2px,-2px);
+}
+
+.form-content select:hover{
+    transform: translate(2px,-2px);
+}
+
+button{
+    margin-left: 27px;
+    padding: 10px;
+    background-color: darkblue;
+    color: white;
+    border: none;
+    width: 110px;
+    border-radius: 50px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+button:hover{
+    font-weight: bold;
+    font-size: 15px;
+    transform: translate(2px,-2px);
+}
+
+
+.selectDisplayNotes{
+    background-color:rgb(230, 229, 229);
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+    margin: 40px;
+    width: 650px;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 5px 5px 9px 2px gray;
+}
+
+.selectDisplayNotes label{
+    font-size: large;
+    font-weight: bold;
+}
+
+.selectDisplayNotes span{
+    font-size: 17px;
+}
+
+.displayBlock{
+    margin: 40px;
+    width: 650px;
+    height: 600px;
+    /* border: 1px solid lightblue; */
+}
+
+.displayNote{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+}
+
+.loader {
+    border: 16px solid #f3f3f3; 
+    border-top: 16px solid #3498db; 
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+  }
+  
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  } 
+
+.notes{
+    border: none; 
+    border: 1px solid black;
+    border-radius: 15px;
+    width: 300px;
+    margin-bottom: 30px;
+    padding: 20px;
+    text-align:justify;
+    box-shadow: 5px 7px 9px 2px gray;
+    background-color: #3baea0;
+}
+
+.displayNote h1, p span{
+    font-weight: bold;
+    font-size: large;
+}
+
+.General{
+    border: none;
+    border: 1px solid black;
+    background-color: palevioletred;
+    border-radius: 15px;
+    width: 300px;
+    margin-bottom: 30px;
+    padding: 20px;
+    text-align:justify;
+    box-shadow: 5px 7px 9px 2px gray;
+}
+
+.Technical{
+    border: none;
+    border: 1px solid black;
+    background-color: lightgreen;
+    border-radius: 15px;
+    width: 300px;
+    margin-bottom: 30px;
+    padding: 20px;
+    text-align:justify;
+    box-shadow: 5px 7px 9px 2px gray;
+}
+
+.Official{
+    border: none;
+    border: 1px solid black;
+    background-color: #3498db;
+    border-radius: 15px;
+    width: 300px;
+    margin-bottom: 30px;
+    padding: 20px;
+    text-align:justify;
+    box-shadow: 5px 7px 9px 2px gray;
+}
+
+.editbtn{
+    height: 45px;
+    width: 45px;
+    margin: 5px auto;
+    padding: 13px;
+    border-radius: 50px;
+    background-color: gainsboro;
+    color: rgb(97, 157, 226);
+}
+
+.editbtn:hover{
+    background-color: gainsboro;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    padding: 16px;
+}
+
+.deletebtn{
+    height: 45px;
+    width: 45px;
+    margin: 5px auto;
+    padding: 13px;
+    border-radius: 50px;
+    background-color: gainsboro;
+    color: red;
+}
+
+.deletebtn:hover{
+    background-color: gainsboro;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    padding: 16px;
+} 
+
+
+@media screen and (max-width: 770px){
+    .maintag{
+        display: block;
+        font-size: large;
+    }
+
+    nav{
+        position: static;
+    }
+
+     .formBlock{
+        margin: 20px;
+        margin-bottom: 30px;
+        width: 95%;
+    }
+
+    .form-content select{
+        width: 200px;
+        text-align: center;
+    }
+
+    .form-content select option{
+        color: #3498db;
+        text-align: center;
+    }
+
+    .selectDisplayNotes{
+        margin: 30px;
+    }
+
+    .selectDisplayNotes label{
+        font-size: larger;
+    }
+
+    .selectDisplayNotes span{
+        font-size: larger;
+    }
+
+    .displaySection{
+        height: 500vh;
+    }
+
+    .displayBlock{
+        height: max-content;
+        width: 600px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .displayNote{
+        margin: -10px;
+    }
+}
+
